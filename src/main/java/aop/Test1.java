@@ -10,14 +10,18 @@ public class Test1 {
                 new AnnotationConfigApplicationContext(Config.class);
 
         Library library = context.getBean("library", Library.class);
+//        Book book = context.getBean("book", Book.class);
 
-        library.addABook();
+//        library.getBook(book, 3);
+//        library.getMagazine("GQ");
+        library.addMagazine();
+        library.addBook();
+        library.getBook();
+        library.getMagazine();
+        library.returnMagazine();
+        library.returnBook();
 
-        try {
-            library.getBook();
-        } catch (Exception e) {
-            System.out.println("Книг нет");
-        }
+
 
         ((AnnotationConfigApplicationContext) context).close();
 
