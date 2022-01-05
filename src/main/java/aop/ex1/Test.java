@@ -1,9 +1,9 @@
-package aop;
+package aop.ex1;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class Test1 {
+public class Test {
     public static void main(String[] args) {
 
         ApplicationContext context =

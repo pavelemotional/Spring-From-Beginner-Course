@@ -1,4 +1,4 @@
-package aop.aspects.Example;
+package aop.ex1.aspects.Example;
 
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
@@ -7,22 +7,22 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class AspectEx2 {
 //
-//    @Pointcut("execution(* aop.Library.get*())")
+//    @Pointcut("execution(* aop.ex1.Library.get*())")
 //    private void allGetMethods() {
 //    }
-//    @Pointcut("execution(* aop.Library.return*())")
+//    @Pointcut("execution(* aop.ex1.Library.return*())")
 //    private void allReturnMethods() {
 //    }
-//    @Pointcut("execution(* aop.Library.add*())")
+//    @Pointcut("execution(* aop.ex1.Library.add*())")
 //    private void allAddMethods() {
 //    }
 //    @Pointcut("allGetMethods() || allReturnMethods()")
 //    private void allAddAndReturnMethods() {
 //    }
-//    @Pointcut("execution(* aop.Library.*(..))")
+//    @Pointcut("execution(* aop.ex1.Library.*(..))")
 //    private void allMethods() {
 //    }
-//    @Pointcut("execution(public void aop.Library.returnMagazine())")
+//    @Pointcut("execution(public void aop.ex1.Library.returnMagazine())")
 //    private void returnMagazine() {
 //    }
 //    @Pointcut("allMethods() && !returnMagazine()")

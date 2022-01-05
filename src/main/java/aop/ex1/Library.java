@@ -1,6 +1,5 @@
-package aop;
+package aop.ex1;
 
-import aop.annotation.BeforeGetLoggingAdvice;
 import org.springframework.stereotype.Component;
 
 @Component

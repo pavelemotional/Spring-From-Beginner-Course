@@ -1,6 +1,6 @@
-package aop.aspects;
+package aop.ex1.aspects;
 
-import aop.Book;
+import aop.ex1.Book;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Aspect;
@@ -16,13 +16,13 @@ import java.util.Arrays;
 @Order(1)
 public class LoggingAspect {
 
-    @Before("aop.aspects.pointcuts.MyPointcuts.allGetMethods()")
+    @Before("aop.ex1.aspects.pointcuts.MyPointcuts.allGetMethods()")
     public void beforeGetLoggingAdvice() {
         System.out.println("beforeGetLoggingAdvice: Popitka poluchit' knigu/zhurnal");
         System.out.println("###############################################");
     }
 
-    @Before("aop.aspects.pointcuts.MyPointcuts.allAddMethods()")
+    @Before("aop.ex1.aspects.pointcuts.MyPointcuts.allAddMethods()")
     public void beforeAddLoggingAdvice(JoinPoint joinPoint) {
 
         Signature signature = joinPoint.getSignature();
