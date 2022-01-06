@@ -1,7 +1,10 @@
 package aop.ex2.aspects;
 
 import aop.ex2.Student;
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -40,5 +43,14 @@ public class UniversityLoggingAspect {
     public void afterThrowingGetStudentsLoggingAdvice(Throwable exception) {
         System.out.println("afterThrowingGetStudentsLoggingAdvice:" +
                 " Logiruem vibros isklucheniya " + exception);
+    }
+
+    @After("aop.ex2.aspects.Pointcuts.getStudentsMethod()")
+    public void afterFinallyGetStudentsLoggingAdvice(JoinPoint joinPoint) {
+        MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
+        String name = methodSignature.getName();
+
+        System.out.println("afterFinallyGetStudentsLoggingAdvice:" +
+                " Logiruem vibros isklucheniya  ili normal'nuy rabotu methoda " + name);
     }
 }
