@@ -7,7 +7,7 @@ import spring_introduction.xml_configuration.entities.Pet;
 public class Test1 {
     public static void main(String[] args) {
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("ContextXmlConfiguration.xml");
+                new ClassPathXmlApplicationContext("spring_introduction/ContextXmlConfiguration.xml");
 
         Pet pet1 = context.getBean("myPet", Pet.class);
         pet1.say();

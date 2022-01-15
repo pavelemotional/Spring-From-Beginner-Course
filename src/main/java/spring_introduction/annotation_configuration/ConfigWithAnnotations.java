@@ -9,7 +9,7 @@ import spring_introduction.annotation_configuration.entities.Pet;
 public class ConfigWithAnnotations {
     public static void main(String[] args) {
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("ContextAnnotationConfiguration.xml");
+                new ClassPathXmlApplicationContext("spring_introduction/ContextAnnotationConfiguration.xml");
 
         Pet pet1 = context.getBean("cat", Pet.class);
         pet1.say();

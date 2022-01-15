@@ -7,7 +7,7 @@ import spring_introduction.annotation_configuration.entities.Pet;
 public class ScopeTest {
     public static void main(String[] args) {
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("ContextAnnotationConfiguration.xml");
+                new ClassPathXmlApplicationContext("spring_introduction/ContextAnnotationConfiguration.xml");
 
         Pet petSingleton1 = context.getBean("dog", Pet.class);
         Pet petSingleton2 = context.getBean("dog", Pet.class);

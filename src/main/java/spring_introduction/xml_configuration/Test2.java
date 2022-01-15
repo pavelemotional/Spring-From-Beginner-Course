@@ -7,7 +7,7 @@ import spring_introduction.xml_configuration.entities.Person;
 public class Test2 {
     public static void main(String[] args) {
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("ContextXmlConfiguration.xml");
+                new ClassPathXmlApplicationContext("spring_introduction/ContextXmlConfiguration.xml");
 
         Person person = context.getBean("myPerson", Person.class);
         person.callYourPet();
